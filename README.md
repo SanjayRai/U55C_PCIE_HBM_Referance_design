@@ -1,8 +1,15 @@
 # U55C_PCIE_HBM_Referance_design
 Referance XDMA HBM design for U55C
 
-Buildgin XDMA driver:
- Get the sources from https://github.com/Xilinx/dma_ip_drivers  and build the driver.
+Requirements:
+1. U55C card
+2. x86 Linux desktop (OS requirement the same as xDMA driver OS requirement)
+3. vivado 2021.2 (https://www.xilinx.com/support/download.html)
+
+
+
+Build XDMA driver:
+ Get the sources from https://github.com/Xilinx/dma_ip_drivers  and build the driver per instructions.
 
 
 Building  bit file:
@@ -12,6 +19,10 @@ Building  bit file:
 
 * The bifile (u55c_top.bit) and ltx (u55c_top.ltx) will be in the project_X/project_X.runs/impl_1 directory
 * The bitfile and ltx file can be loaded to the U55C card via JTAG/USB Cable from Vivado Hardware Manager.
+
+Modifying the  IPI design
+1. cd IP
+2. vivado -source vivado_project.tcl
 
 
 Reboot server after  loading the bitfile. lspci command should now show the  enumerated card.
