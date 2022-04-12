@@ -1,0 +1,1 @@
+sudo ddd --args ./passthru.dbg_hw df000000 

@@ -1,0 +1,39 @@
+SRCS_GPP   :=  $(SRCS_HOST)
+
+.PHONY: all
+all: tb_gpp_hw
+
+.PHONY: host_exe
+host_exe: tb_gpp_hw
+
+.PHONY: host_exe_dbg
+host_exe_dbg: tb_gpp_hw_debug
+
+help:
+	@echo "Make targets :"
+	@echo "host_exe | host_exe_dbg | clean "
+
+tb_gpp_debug: $(SRCS_GPP) 
+	$(CXX) $(CXXFLAGS_GPP_ONLY_DEBUG) -o $(DESIGN_NAME).sw_sim $^ 
+
+tb_gpp_hw_debug: $(SRCS_GPP) 
+	$(CXX) $(CXXFLAGS_GPP_HW_DEBUG) -o $(DESIGN_NAME).dbg_hw $^ 
+
+tb_gpp_hw: $(SRCS_GPP) 
+	$(CXX) $(CXXFLAGS_GPP_HW) -o $(DESIGN_NAME).hw $^ 
+
+sdx_host_exe: $(SRCS_GPP)
+	$(CXX) $(CXXFLAGS) -o $@ $^ 
+
+clean:
+	rm -rf *.xclbin tb_gpp sdx_host_exe xocc* sdaccel* .Xil _xocc_*.dir
+	-rm -rf $(DESIGN_NAME).dbg_sw_sim 
+	-rm -rf $(DESIGN_NAME).dbg_hw 
+	-rm -rf $(DESIGN_NAME).sw_sim 
+	-rm -rf $(DESIGN_NAME).hw 
+	-rm -rf gmon.out
+	-rm -rf log.out
+	-rm -rf emulation_debug.log
+	-rm -rf webtalk* 
+
+

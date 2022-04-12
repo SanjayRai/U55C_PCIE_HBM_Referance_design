@@ -1,0 +1,5 @@
+
+rm -rf .Xil/
+rm -rf project_X/
+rm vivado*.jou
+rm vivado*.log

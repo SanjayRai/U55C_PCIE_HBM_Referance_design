@@ -1,0 +1,51 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.46075",
+   "Default View_TopLeft":"1221,413",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port pcie -pg 1 -lvl 7 -x 2110 -y 870 -defaultsOSRD
+preplace port port-id_prst_n -pg 1 -lvl 0 -x -100 -y 920 -defaultsOSRD
+preplace port port-id_sys_clk -pg 1 -lvl 0 -x -100 -y 880 -defaultsOSRD
+preplace port port-id_sys_clk_gt -pg 1 -lvl 0 -x -100 -y 900 -defaultsOSRD
+preplace port port-id_HBM_REF_CLK -pg 1 -lvl 0 -x -100 -y 480 -defaultsOSRD
+preplace inst xdma_0 -pg 1 -lvl 2 -x 450 -y 910 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -x 100 -y 980 -defaultsOSRD
+preplace inst smartconnect_0 -pg 1 -lvl 3 -x 790 -y 250 -defaultsOSRD
+preplace inst system_management_wiz_0 -pg 1 -lvl 5 -x 1590 -y 290 -defaultsOSRD
+preplace inst axi_bram_ctrl_1 -pg 1 -lvl 5 -x 1590 -y 80 -defaultsOSRD
+preplace inst axi_bram_ctrl_1_bram -pg 1 -lvl 6 -x 1960 -y 80 -defaultsOSRD
+preplace inst system_ila_AXILITE -pg 1 -lvl 3 -x 790 -y 400 -defaultsOSRD
+preplace inst system_ila_AXIMM -pg 1 -lvl 5 -x 1590 -y 780 -defaultsOSRD -resize 160 116
+preplace inst hbm_0 -pg 1 -lvl 5 -x 1590 -y 570 -defaultsOSRD
+preplace inst smartconnect_1 -pg 1 -lvl 3 -x 790 -y 690 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 3 -x 790 -y 540 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 4 -x 1140 -y 960 -defaultsOSRD
+preplace netloc HBM_REF_CLK_0_0_1 1 0 5 NJ 480 NJ 480 N 480 NJ 480 1350
+preplace netloc clk_wiz_0_clk_out100m 1 3 2 930J 600 1350
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 4 1 1340 620n
+preplace netloc reset_rtl_0_1 1 0 2 NJ 920 NJ
+preplace netloc sys_clk_1 1 0 2 NJ 880 NJ
+preplace netloc sys_clk_gt_0_1 1 0 2 NJ 900 NJ
+preplace netloc xdma_0_axi_aclk 1 2 3 630 610 N 610 1330
+preplace netloc xdma_0_axi_aresetn 1 2 3 650 800 940 800 1320
+preplace netloc xlconstant_0_dout 1 1 1 180J 940n
+preplace netloc axi_bram_ctrl_1_BRAM_PORTA 1 5 1 N 70
+preplace netloc axi_bram_ctrl_1_BRAM_PORTB 1 5 1 N 90
+preplace netloc smartconnect_0_M00_AXI 1 3 2 930 60 N
+preplace netloc smartconnect_0_M01_AXI 1 3 2 N 260 N
+preplace netloc smartconnect_1_M00_AXI 1 3 2 N 690 1360
+preplace netloc xdma_0_M_AXI 1 2 1 640 670n
+preplace netloc xdma_0_M_AXI_LITE 1 2 1 620 220n
+preplace netloc xdma_0_pcie_mgt 1 2 5 NJ 870 950J 860 1320 870 NJ 870 NJ
+levelinfo -pg 1 -100 100 450 790 1140 1590 1960 2110
+pagesize -pg 1 -db -bbox -sgen -260 -20 2190 1060
+"
+}
+{
+   "da_axi4_cnt":"1",
+   "da_board_cnt":"2",
+   "da_bram_cntlr_cnt":"4",
+   "da_clkrst_cnt":"5"
+}
